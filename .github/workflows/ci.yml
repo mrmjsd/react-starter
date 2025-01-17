@@ -20,6 +20,9 @@ jobs:
         with:
           node-version: '20'  # Use the same version as specified in your `engines`
 
+      - name: Install pnpm
+        run: npm install -g pnpm  # Install pnpm globally
+
       - name: Install dependencies
         run: pnpm install
 
@@ -38,6 +41,9 @@ jobs:
       - name: Set up Node
         uses: actions/setup-node@v4
 
+      - name: Install pnpm
+        run: npm install -g pnpm  # Install pnpm globally
+
       - name: Install dependencies
         run: pnpm install
 
@@ -48,4 +54,3 @@ jobs:
         uses: codecov/codecov-action@v5
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
-
