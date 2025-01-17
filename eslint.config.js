@@ -60,9 +60,7 @@ const typescriptConfig = {
     '@typescript-eslint/array-type': ['error', { default: 'generic' }],
     '@typescript-eslint/consistent-type-exports': 'error',
     '@typescript-eslint/consistent-type-imports': 'error',
-    '@typescript-eslint/explicit-function-return-type': 'error',
     '@typescript-eslint/explicit-member-accessibility': 'error',
-    '@typescript-eslint/explicit-module-boundary-types': 'error',
     '@typescript-eslint/no-confusing-void-expression': 'error',
     '@typescript-eslint/no-import-type-side-effects': 'error',
     '@typescript-eslint/no-require-imports': 'error',
@@ -104,21 +102,11 @@ const reactConfig = {
     'react/jsx-filename-extension': [2, { extensions: ['.js', '.jsx', '.ts', '.tsx'] }],
     'react/jsx-no-target-blank': 'off',
     'react/jsx-max-props-per-line': 'off',
-    'react/jsx-sort-props': [
-      'error',
-      {
-        callbacksLast: true,
-        shorthandFirst: true,
-        reservedFirst: true,
-        multiline: 'last'
-      }
-    ],
     'react/no-unknown-property': 'off',
     'react/prop-types': 'off',
     'react/react-in-jsx-scope': 'off',
     'react-hooks/exhaustive-deps': 'error',
     ...patchedReactHooksPlugin.configs.recommended.rules,
-    'react-refresh/only-export-components': ['warn', { allowConstantExport: true }]
   }
 };
 
